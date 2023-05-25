@@ -1,0 +1,102 @@
+<div>
+  <div>
+    <h1>{{name}}</h1>
+  </div>
+
+  <br />
+
+  <section>
+    {{#each users}}
+      <hr />
+      <h2>{{name}}</h2>
+      <b>{{age}} years, {{gender}} (<em>ID: {{id}}</em>)</b>
+      <h4>Friends</h4>
+      <ul>
+        {{#each friends}}
+          <li>
+            {{name}}
+            {{age}}
+            years,
+            {{gender}}
+            (<em>ID: {{id}}</em>)
+          </li>
+          <span>Mutual friends:</span>
+          {{#if mutual_friends}}
+            <ul>
+              {{#each mutual_friends}}
+                <li>
+                  {{name}}
+                  {{age}}
+                  years,
+                  {{gender}}
+                  (<em>ID: {{id}}</em>)
+                </li>
+                {{#if mutual_friends}}
+                  <ul>
+                    {{#each mutual_friends}}
+                      <li>
+                        {{name}}
+                        {{age}}
+                        years,
+                        {{gender}}
+                        (<em>ID: {{id}}</em>)
+                      </li>
+                    {{/each}}
+                  </ul>
+                {{/if}}
+              {{/each}}
+            </ul>
+          {{/if}}
+          {{#if groups}}
+            <h3>Groups</h3>
+            <ul>
+              {{#each groups}}
+                <li>{{name}} (id: {{id}})</li>
+                <ul>
+                  <li>Description: {{description}}</li>
+                </ul>
+                {{#if members}}
+                  <ul>
+                    {{#each members}}
+                      <li>
+                        {{name}}
+                        {{age}}
+                        years,
+                        {{gender}}
+                        (<em>ID: {{id}}</em>)
+                      </li>
+                    {{/each}}
+                  </ul>
+                {{/if}}
+              {{/each}}
+            </ul>
+          {{/if}}
+        {{/each}}
+      </ul>
+      {{#if groups}}
+        <h3>Groups</h3>
+        <ul>
+          {{#each groups}}
+            <li>{{name}} (id: {{id}})</li>
+            <ul>
+              <li>Description: {{description}}</li>
+            </ul>
+            {{#if members}}
+              <ul>
+                {{#each members}}
+                  <li>
+                    {{name}}
+                    {{age}}
+                    years,
+                    {{gender}}
+                    (<em>ID: {{id}}</em>)
+                  </li>
+                {{/each}}
+              </ul>
+            {{/if}}
+          {{/each}}
+        </ul>
+      {{/if}}
+    {{/each}}
+  </section>
+</div>
