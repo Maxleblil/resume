@@ -296,8 +296,9 @@ router.get('/facebook', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('facebook', {
-    layout: 'basic',
     name: 'Facebook',
+    layout: 'basic',
+
     users: [
       {
         id: 1,
@@ -446,8 +447,6 @@ router.get('/facebook', function (req, res) {
     ],
   })
 })
-//                  ↑↑ сюди вводимо JSON дані
-
 
 // router.get Створює нам один ентпоїнт
 
@@ -532,7 +531,11 @@ router.get('/mac', function (req, res) {
         {
           name: 'USB-C to USB Adapter',
           price: 19.99,
-
+        },
+      ],
+    },
+  })
+})
 
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -630,9 +633,9 @@ router.get('/car', function (req, res) {
       total: 28990,
     },
   })
-}) 
-  
-  //                  ↑↑ сюди вводимо JSON дані
+})
+
+//                  ↑↑ сюди вводимо JSON дані
 
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -715,9 +718,6 @@ router.get('/js', function (req, res) {
 })
 
 // ================================================================
-
-
-
 
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -803,6 +803,7 @@ router.get('/program', function (req, res) {
     },
   })
 })
+
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -909,7 +910,6 @@ router.get('/person', function (req, res) {
 
 // ================================================================
 
-
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -920,11 +920,13 @@ router.get('/bootstrap', function (req, res) {
   res.render('bootstrap', {
     layout: 'bootstrap',
   })
-  //                  ↑↑ сюди вводимо JSON дані
+})
+
+//                  ↑↑ сюди вводимо JSON дані
 // ================================================================
-  
+
 // ================================================================
-  
+
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -1148,7 +1150,6 @@ router.get('/web', function (req, res) {
               ],
             },
           ],
-
         },
       ],
     },
