@@ -1,0 +1,132 @@
+<main>
+  <div class='card'>
+    <div class='card-body'>
+
+      <div class='card'>
+        <div class='card-body'>
+          {{#with heading.main}}
+            <h1>{{title}}</h1>
+            <p>{{text}}</p>
+            <button class='btn btn-primary'>
+              {{button_text.solid}}
+            </button>
+            <button class='btn btn-outline-primary'>
+              {{button_text.outline}}
+            </button>
+          {{/with}}
+        </div>
+      </div>
+
+      <br />
+
+      <div class='card'>
+        <div class='card-body'>
+          {{#with heading.second}}
+            <h2>{{title}}</h2>
+            <p>{{text}}</p>
+            <button class='btn btn-secondary'>
+              {{button_text.solid}}
+            </button>
+            <button class='btn btn-outline-secondary'>
+              {{button_text.outline}}
+            </button>
+          {{/with}}
+        </div>
+      </div>
+
+      <br />
+
+      <div class='card'>
+        <div class='card-body'>
+          {{#with heading.subblock}}
+            <h3>{{title}}</h3>
+            <p>{{text}}</p>
+            <button class='btn btn-dark'>
+              {{button_text.solid}}
+            </button>
+            <button class='btn btn-outline-dark'>
+              {{button_text.outline}}
+            </button>
+          {{/with}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <div>
+    {{#with nested_display}}
+      <div class='card'>
+        <div class='card-body'>
+          <div class='display-1'>{{title}}</div>
+          <br />
+          {{#with children_display}}
+            <div class='card'>
+              <div class='card-body'>
+                <div class='display-4'>{{title}}</div>
+                <p>{{text}}</p>
+                <button class='btn btn-outline-warning'>
+                  {{button.text}}
+                </button>
+              </div>
+            </div>
+          {{/with}}
+          <div class='display-6'>
+            <p>{{header_text}}</p>
+          </div>
+          <button class='btn btn-info'>
+            {{button.text}}
+          </button>
+        </div>
+      </div>
+    {{/with}}
+  </div>
+
+  <br />
+  <br />
+
+  <div class='card'>
+    <div class='card-body'>
+      <p class='text-uppercase'>{{paragraph.title}}</p>
+      <p class='text-lowercase'>{{paragraph.text}}</p>
+      <p class='text-primary'>Link</p>
+      <div class='card'>
+        <div class='card-body'>
+          <ul>
+            <li>
+              <button class='btn btn-link'>
+                <a
+                  target='_blank'
+                  href='{{paragraph.button.url}}'
+                >{{paragraph.button.text}}</a>
+              </button>
+            </li>
+            {{#each paragraph.list_name}}
+              {{#if paragraph.list_name}}
+                <li>
+                  <button class='btn btn-link'>
+                    <a
+                      target='_blank'
+                      href='{{url}}'
+                    >{{text}}</a>
+                  </button>
+                </li>
+              {{else}}
+                <li>
+                  <button class='btn btn-link'>
+                    <a
+                      target='_blank'
+                      href='{{url}}'
+                    >{{text}}</a>
+                  </button>
+                </li>
+              {{/if}}
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
