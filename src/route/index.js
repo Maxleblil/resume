@@ -291,7 +291,6 @@ router.get('/work', function (req, res) {
 
 // router.get Створює нам один ентпоїнт
 
-
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/task21', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -355,6 +354,11 @@ router.get('/task21', function (req, res) {
         {
           text: 'Bootstrap',
           url: 'https://getbootstrap.com/',
+        },
+      ],
+    },
+  })
+})
 
 router.get('/facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
