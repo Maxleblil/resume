@@ -1,17 +1,17 @@
 <div>
   <h1>{{program.excursion.name}}</h1>
-  <h2>
+  <h2 class='py-2'>
     {{program.excursion.location.city}},
     {{program.excursion.location.country}}
   </h2>
   <b>{{program.excursion.date}}</b>
 
-  <hr />
+  <hr class='pt-4 mt-5' />
 
-  <h3>Program</h3>
+  <h3 class='pb-3'>Program</h3>
   {{#each program.excursion.program}}
     <div>
-      <ul>
+      <ul class='pb-2'>
         <li>
           <p>{{name}}</p>
           <p>Type: {{type}}</p>
@@ -19,19 +19,19 @@
         </li>
       </ul>
 
-      <h3>Details</h3>
+      <h4 class='pb-2'>Details</h4>
       {{#with details.museum}}
-        <div>
-          <h4>Museum: {{name}}</h4>
-          <p>Location:
+        <div class='pb-4'>
+          <h5 class='pb-3'>Museum: {{name}}</h5>
+          <p class='ps-4 pb-4'>Location:
             {{location.address}},
             {{location.city}},
             {{location.country}}
           </p>
 
-          <h4>Exhibits</h4>
+          <h4 class='pb-3'>Exhibits</h4>
           {{#each exhibits}}
-            <div>
+            <div class='ps-4'>
               <p>{{name}}</p>
               {{#if artist}}
                 <p>Artist: {{artist}}</p>
@@ -50,9 +50,9 @@
       {{/with}}
 
       {{#with details.venue}}
-        <div>
-          <h4>Venue: {{name}}</h4>
-          <p>Location:
+        <div class='pb-4'>
+          <h5>Venue: {{name}}</h5>
+          <p class='ps-4'>Location:
             {{location.address}},
             {{location.city}},
             {{location.country}}
@@ -61,7 +61,7 @@
           {{#each performers}}
             <div>
               <h5>{{name}}</h5>
-              <p>Type: {{type}}</p>
+              <p class='ps-4'>Type: {{type}}</p>
             </div>
           {{/each}}
         </div>
@@ -69,9 +69,9 @@
 
       {{#with details.guide}}
         <div>
-          <h4>Guide: {{name}}</h4>
-          <p>Language: {{language}}</p>
-          <p>Rating: {{rating}}</p>
+          <h4 class='pb-3'>Guide: {{name}}</h4>
+          <p class='ps-4'>Language: {{language}}</p>
+          <p class='ps-4'>Rating: {{rating}}</p>
         </div>
       {{/with}}
     </div>

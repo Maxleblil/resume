@@ -1,20 +1,19 @@
 <div>
-  <div>
+  <div class='mb-5'>
     <h1>{{name}}</h1>
   </div>
 
-  <br />
-  <hr />
+  <hr class='mb-4' />
 
   <div>
-    <h2>Description</h2>
+    <h2 class='mb-3'>Description</h2>
     <p>{{description}}</p>
   </div>
 
   <br />
 
   <div>
-    <h3>History</h3>
+    <h3 class='mb-3'>History</h3>
     <p>Year: {{history.year}}</p>
     <p>Founder: {{history.founder}}</p>
   </div>
@@ -23,62 +22,59 @@
   <hr />
 
   <div>
-    <h3>Syntax</h3>
+    <h3 class='mb-4'>Syntax</h3>
 
-    <h4>Variables</h4>
-    <ul>
+    <h5 class='ps-2'>Variables</h5>
+    <ul class='mb-5'>
       {{#each syntax.variables}}
         <li>{{this}}</li>
       {{/each}}
     </ul>
 
-    <h4>Functions</b>
-    <ul>
+    <h5 class='ps-2'>Functions</h5>
+    <ul class='mb-5'>
       {{#each syntax.functions}}
         <li>{{this}}</li>
       {{/each}}
     </ul>
 
-    <h4>Conditionals</h4>
-    <ul>
+    <h5 class='ps-2'>Conditionals</h5>
+    <ul class='mb-5'>
       {{#each syntax.conditionals}}
         <li>{{this}}</li>
       {{/each}}
     </ul>
 
-    <h4>Loops</h4>
-    <ul>
+    <h5 class='ps-2'>Loops</h5>
+    <ul class='mb-5'>
       {{#each syntax.loops}}
         <li>{{this}}</li>
       {{/each}}
     </ul>
 
-    <h4>classes</h4>
-    <ul>
+    <h5 class='ps-2'>classes</h5>
+    <ul class='mb-5'>
       {{#each syntax.classes}}
         <li>{{this}}</li>
       {{/each}}
     </ul>
   </div>
 
-  <br />
   <hr />
 
-
-  <div>
-    <h3>Features</h3>
+  <div class='py-4'>
+    <h3 class='mb-3'>Features</h3>
     <ul>
-    {{#each features}}
-      <li>{{this}}</li>
-    {{/each}}
+      {{#each features}}
+        <li>{{this}}</li>
+      {{/each}}
     </ul>
   </div>
 
-  <br />
   <hr />
 
-  <div>
-    <h3>Libraries</h3>
+  <div class='py-4'>
+    <h3 class='mb-3'>Libraries</h3>
     <ul>
       {{#each libraries}}
         <li>{{this}}</li>
@@ -86,11 +82,10 @@
     </ul>
   </div>
 
-  <br />
   <hr />
 
-  <div>
-    <h3>Tools</h3>
+  <div class='py-4'>
+    <h3 class='mb-3'>Tools</h3>
     <ul>
       {{#each tools}}
         <li>{{this}}</li>
@@ -98,11 +93,10 @@
     </ul>
   </div>
 
-  <br />
   <hr />
 
-  <div>
-    <h3>Community</h3>
+  <div class='py-4'>
+    <h3 class='mb-3'>Community</h3>
     <ul>
       {{#each community}}
         <li>{{this.name}} - {{this.type}}</li>

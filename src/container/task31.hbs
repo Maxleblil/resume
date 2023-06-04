@@ -21,10 +21,9 @@
     </nav>
 
     <hr />
-    <br />
 
     <div>
-      <h1>{{header.title}}</h1>
+      <h1 class='mb-3'>{{header.title}}</h1>
       <p>{{header.description}}</p>
       <a
         class='btn btn-primary'
@@ -35,17 +34,14 @@
       </a>
     </div>
 
-    <br />
-    <br />
-    <hr />
-    <br />
+    <hr class='py-4' />
 
     <div class='row'>
       <div class='col-12'>
-        <h2>{{city.title}}</h2>
+        <h2 class='mb-4 ps-2'>{{city.title}}</h2>
         <div class='row'>
           {{#each city.cards}}
-            <div class='col-5'>
+            <div class='col-6 p-3'>
               <div class='card'>
                 <img
                   class='card-img-top'
@@ -68,10 +64,7 @@
       </div>
     </div>
 
-    <br />
-    <br />
     <hr />
-    <br />
 
     <div>
       <h2>{{winner.title}}</h2>
@@ -102,33 +95,32 @@
     <hr />
     <br />
 
-    <h2>{{gallery.title}}</h2>
-    <br />
-    <div class='row'>
-      {{#each gallery.cards}}
-        <div class='col-4'>
-          <div class='card'>
-            <div class='card-header'>
-              {{this.name}}
+    <div>
+      <h2>{{gallery.title}}</h2>
+      <br />
+      <div class='row'>
+        {{#each gallery.cards}}
+          <div class='col-4'>
+            <div class='card'>
+              <div class='card-header'>
+                {{this.name}}
+              </div>
+              <table class='table table-bordered mb-0'>
+                <thead>
+                  {{#each this.items}}
+                    <tr>
+                      <td>{{this}}</td>
+                    </tr>
+                  {{/each}}
+                </thead>
+              </table>
             </div>
-            <table class='table table-bordered'>
-              <thead>
-                {{#each this.items}}
-                  <tr>
-                    <td>{{this}}</td>
-                  </tr>
-                {{/each}}
-              </thead>
-            </table>
           </div>
-        </div>
-      {{/each}}
+        {{/each}}
+      </div>
     </div>
 
-    <br />
-    <br />
-    <hr />
-    <br />
+    <hr class='py-4' />
 
     <div class='row'>
       <div class='col-12'>
@@ -150,12 +142,9 @@
       </div>
     </div>
 
-    <br />
-    <br />
-    <hr />
-    <br />
+    <hr class='py-4' />
 
-    <div class='row'>
+    <div class='row mb-4'>
       <div class='col-12'>
         <div class='row'>
           {{#each rest.cards}}
@@ -181,39 +170,36 @@
       </div>
     </div>
 
-    <br />
-    <br />
-    <hr />
-    <br />
+    <hr class='mb-1' />
 
-    <div class='display-2'>
-      {{proposition.title}}
-    </div>
-    <br />
-    <div class='row'>
-      <div class='col-12'>
-        <div class='row'>
-          {{#each proposition.card}}
-            <div class='col-6'>
-              <div class='card text-bg-warning text-light'>
+    <div class='pb-4'>
+      <div class='display-2 mb-5'>
+        {{proposition.title}}
+      </div>
+      <div class='row'>
+        <div class='col-12'>
+          <div class='row'>
+            {{#each proposition.card}}
+              <div class='col-6'>
                 <div
-                  class='card-header'
-                >{{this.header}}</div>
-                <div class='card-body'>
-                  <h5>{{this.title}}</h5>
-                  <p>{{this.description}}</p>
+                  class='card text-bg-warning text-light'
+                >
+                  <div
+                    class='card-header'
+                  >{{this.header}}</div>
+                  <div class='card-body'>
+                    <h5>{{this.title}}</h5>
+                    <p>{{this.description}}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          {{/each}}
+            {{/each}}
+          </div>
         </div>
       </div>
     </div>
 
-    <br />
-    <br />
-    <hr />
-    <br />
+    <hr class='py-2' />
 
     <footer>
       <div class='row'>

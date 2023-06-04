@@ -1,15 +1,20 @@
 <div>
-  <div>
+  <div class='mb-5'>
     <h1>{{name}}</h1>
   </div>
 
-  <br />
-
   <section>
     {{#each users}}
-      <hr />
-      <h2>{{name}}</h2>
-      <b>{{age}} years, {{gender}} (<em>ID: {{id}}</em>)</b>
+      <hr class='mb-5' />
+      <h2 class='mb-3'>{{name}}</h2>
+      <div class='mb-3'>
+        <b>
+          {{age}}
+          years,
+          {{gender}}
+          (<em>ID: {{id}}</em>)
+        </b>
+      </div>
       <h4>Friends</h4>
       <ul>
         {{#each friends}}
@@ -48,7 +53,7 @@
             </ul>
           {{/if}}
           {{#if groups}}
-            <h3>Groups</h3>
+            <h3 class='py-3'>Groups</h3>
             <ul>
               {{#each groups}}
                 <li>{{name}} (id: {{id}})</li>
@@ -74,7 +79,7 @@
         {{/each}}
       </ul>
       {{#if groups}}
-        <h3>Groups</h3>
+        <h3 class='py-3'>Groups</h3>
         <ul>
           {{#each groups}}
             <li>{{name}} (id: {{id}})</li>

@@ -4,15 +4,11 @@
       <h1>{{name}}</h1>
     </div>
 
-    <br />
-    <hr />
+    <hr class='my-5' />
 
-    <h2>Information</h2>
+    <h2 class='mb-5'>Information</h2>
 
-    <br />
-    <br />
-
-    <div>
+    <div class='mb-3'>
       <span>Birth date: {{birthdate}}</span>
       <br />
       <span>Birth place: {{birthplace}}</span>
@@ -26,24 +22,19 @@
       <span>Occupation: {{occupation}}</span>
     </div>
 
-    <br />
-
     <div>
       <strong>Known for</strong>
-
-      <br />
-      <ul>
+      <ul class='pt-2'>
         {{#each known_for}}
           <li>{{this}}</li>
         {{/each}}
       </ul>
     </div>
 
-    <br />
-    <hr />
+    <hr class='my-5' />
 
     <div>
-      <h2>Education</h2>
+      <h2 class='mb-4'>Education</h2>
       <ul>
         {{#each education}}
           <li>Degree: {{degree}}</li>
@@ -54,11 +45,10 @@
       </ul>
     </div>
 
-    <br />
-    <hr />
+    <hr class='my-5' />
 
     <div>
-      <h2>Notable publications</h2>
+      <h2 class='mb-4'>Notable publications</h2>
       <ul>
         {{#each notable_publications}}
           <li>
@@ -75,11 +65,10 @@
       </ul>
     </div>
 
-    <br />
-    <hr />
+    <hr class='my-5' />
 
     <div>
-      <h2>Partners</h2>
+      <h2 class='mb-4'>Partners</h2>
       <ul>
         {{#each partners}}
           <li>
@@ -96,11 +85,10 @@
       </ul>
     </div>
 
-    <br />
-    <hr />
+    <hr class='my-5' />
 
     <div>
-      <h2>Awards</h2>
+      <h2 class='mb-4'>Awards</h2>
       <ul>
         {{#each awards}}
           <li>
@@ -117,11 +105,10 @@
       </ul>
     </div>
 
-    <br />
-    <hr />
+    <hr class='my-5' />
 
-    <div>
-      <h3>Influences</h3>
+    <div class='mb-4'>
+      <h3 class='mb-4'>Influences</h3>
       <ul>
         {{#each influences}}
           <li>{{this}}</li>
@@ -129,8 +116,8 @@
       </ul>
     </div>
 
-    <div>
-      <h3>Influenced</h3>
+    <div class='mb-4'>
+      <h3 class='mb-4'>Influenced</h3>
       <ul>
         {{#each influenced}}
           <li>{{this}}</li>
@@ -139,7 +126,7 @@
     </div>
 
     <div>
-      <h3>Quotes</h3>
+      <h3 class='mb-4'>Quotes</h3>
       <ul>
         {{#each quotes}}
           <li>{{this}}</li>
@@ -147,11 +134,10 @@
       </ul>
     </div>
 
-    <br />
-    <hr />
+    <hr class='my-5' />
 
     <div>
-      <h2>Major discoveries</h2>
+      <h2 class='mb-4'>Major discoveries</h2>
       <ul>
         {{#each major_discoveries}}
           <li>
@@ -168,11 +154,10 @@
       </ul>
     </div>
 
-    <br />
-    <hr />
+    <hr class='my-5' />
 
     <div>
-      <h2>Contributions</h2>
+      <h2 class='mb-4'>Contributions</h2>
       <ul>
         {{#with contributions}}
           <li>Title: {{title}}</li>
