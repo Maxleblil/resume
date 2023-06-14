@@ -2246,7 +2246,6 @@ router.get('/shopcart', function (req, res) {
       ],
     },
 
-
     header: {
       title: 'Кошик',
       button: {
@@ -2371,6 +2370,7 @@ router.get('/shopcart', function (req, res) {
           link: 'https://www.youtube.com/',
         },
       ],
+    },
 
     header: 'Мої замовлення',
 
